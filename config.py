@@ -12,8 +12,8 @@ class Settings(BaseSettings):
     app_name: str = "Imizi API"
     TEST_MODE: bool = False
 
-    ALLOW_SITE = ["*"]
-    TRUSTED_HOSTS = ["*"]
+    ALLOW_SITE = ["*"]  # 특정 Front server와만 통신하고 싶을때
+    TRUSTED_HOSTS = ["*"]  # 특정 사용자의 요청만 받고 싶을 때
     JWT_ALGORITHM = "HS256"
     JWT_SECRET_KEY = os.getenv("JWT_SECRET", "imizi-secret")
     ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 1  # one day
