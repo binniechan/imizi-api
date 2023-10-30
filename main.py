@@ -13,7 +13,7 @@ from app.api.user_api import user
 from app.api.image_api import image
 
 HTTP_BEARER = HTTPBearer(auto_error=False)
-
+# HTTP_BEARER는 token을 받는 용도
 
 def start_app():
     app = FastAPI(debug=True)
